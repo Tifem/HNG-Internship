@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <img src="./IMG-20230818-WA0021.jpg" alt="" srcset="" class="img" />
+        <h3>Boluwatife Janet</h3>
+        <h4>Track :<strong style="font-style: italic;">Frontend</strong></h4>
+        
+        <button><a href="http://">GitHub Link</a></button>
+        <div class="week">
+            <div class="day">
+                <p id="currentDayOfTheWeek"></p>
+            </div>
+            <div class="day">
+                <p id="currentUTCTime"></p>
+
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const weekday = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+      const d = new Date();
+      let day = weekday[d.getDay()];
+      document.getElementById("currentDayOfTheWeek").innerHTML =
+        "Current Day:" + " " + day;
+
+      function addZero(x, n) {
+        while (x.toString().length < n) {
+          x = "0" + x;
+        }
+        return x;
+      }
+
+      const utc = new Date();
+      let h = addZero(utc.getUTCHours(), 2);
+      let m = addZero(utc.getUTCMinutes(), 2);
+      let s = addZero(utc.getUTCSeconds(), 2);
+      let ms = addZero(utc.getUTCMilliseconds(), 3);
+      let time = h + ":" + m + ":" + s + ":" + ms;
+      document.getElementById("currentUTCTime").innerHTML = "UTC:" + " " + time;
+    </script>
+  </body>
+</html>
