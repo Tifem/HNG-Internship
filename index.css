@@ -39,8 +39,8 @@ font-size: 25px;
     font-size: 20px;
 }
 .content img{
-    max-width: 60%;
-    border-radius: 40%;
+    max-width: 55%;
+    border-radius: 100%;
     box-shadow: #000;
     margin:30px ;
     margin-bottom: 15px;
@@ -83,5 +83,5 @@ button:hover{
 .day {
     border: 3px solid green;
     padding: 8px;
-    border-radius: 5px;
+    border-radius: 15px;
 }
