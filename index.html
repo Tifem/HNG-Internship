@@ -9,17 +9,17 @@
   <body>
     <div class="container">
       <div class="content">
-        <img src="./IMG-20230818-WA0021.jpg" alt="" srcset="" class="img" />
-        <h3>Boluwatife Janet</h3>
-        <h4>Track :<strong style="font-style: italic;">Frontend</strong></h4>
+        <img src="./IMG-20230818-WA0021.jpg" alt="" srcset="" class="img" data-testid="slackDisplayImage" />
+        <h3 data-testid="slackUserName">Boluwatife Janet</h3>
+        <h4 data-testid="myTrack">Track :<strong style="font-style: italic;">Frontend</strong></h4>
         
-        <button><a href="https://github.com/Tifem/HNG-Internship">GitHub Link</a></button>
+        <button data-testid="githubURL"><a href="https://github.com/Tifem/HNG-Internship">GitHub Link</a></button>
         <div class="week">
             <div class="day">
-                <p id="currentDayOfTheWeek"></p>
+                <p data-testid="currentDayOfTheWeek" id="currentDayOfTheWeek"></p>
             </div>
             <div class="day">
-                <p id="currentUTCTime"></p>
+                <p data-testid="currentUTCTime" id="currentUTCTime"></p>
 
             </div>
         </div>
@@ -53,7 +53,7 @@
       let m = addZero(utc.getUTCMinutes(), 2);
       let s = addZero(utc.getUTCSeconds(), 2);
       let ms = addZero(utc.getUTCMilliseconds(), 3);
-      let time = h + ":" + m + ":" + s + ":" + ms;
+      let time = h + m + s + ms;
       document.getElementById("currentUTCTime").innerHTML = "UTC:" + " " + time;
     </script>
   </body>
